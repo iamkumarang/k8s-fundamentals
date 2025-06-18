@@ -4,7 +4,7 @@ YOU → kubectl → API Server → etcd → Scheduler → kubelet → Pod Runnin
 
 STEP-BY-STEP FLOW
 STEP 1: You Make the Request
-bashkubectl create pod my-app --image=nginx
+kubectl create pod my-app --image=nginx
 What happens: kubectl sends HTTP request to API Server
 
 STEP 2: API Server (Reception Desk)
@@ -65,7 +65,7 @@ Time: 6000ms → kube-proxy updates networking
 
 QUICK STATUS CHECK
 Check what's happening:
-bashkubectl get pods -w    # Watch real-time changes
+kubectl get pods -w    # Watch real-time changes
 kubectl describe pod my-app    # See the events
 You'll see:
 0s   Scheduled    Pod assigned to node2
